@@ -7,20 +7,18 @@
 # warning: compilation options might not be optical
 
 project ( infozip C )
-cmake_minimum_required ( VERSION 2.6 )
+cmake_minimum_required ( VERSION 2.8 )
 include ( cmake/dist.cmake )
 
-set ( SRC_UNZIP
-  crc32.c crypt.c envargs.c explode.c extract.c fileio.c
-  globals.c inflate.c list.c match.c process.c ttyio.c ubz2err.c
-  unreduce.c unshrink.c unzip.c zipinfo.c )
+set ( SRC_UNZIP crc32.c crypt.c envargs.c explode.c extract.c fileio.c globals.c 
+  inflate.c list.c match.c process.c ttyio.c ubz2err.c unreduce.c unshrink.c unzip.c 
+  zipinfo.c )
 if ( WIN32 AND NOT CYGWIN )
-  set ( SRC_UNZIP ${SRC_UNZIP}
-        win32/crc_i386.c win32/nt.c win32/win32.c win32/win32i64.c)
-else ()
+  set ( SRC_UNZIP ${SRC_UNZIP} win32/crc_i386.c win32/nt.c win32/win32.c win32/win32i64.c )
+else ( )
   add_definitions ( -DUNIX )
   set ( SRC_UNZIP ${SRC_UNZIP} unix/unix.c )
-endif ()
+endif ( )
 
 include_directories ( . )
 
@@ -28,7 +26,7 @@ include ( CheckFunctionExists )
 check_function_exists ( lchmod HAVE_LCHMOD )
 if ( NOT HAVE_LCHMOD )
   add_definitions ( -DNO_LCHMOD )
-endif ()
+endif ( )
 
 add_executable ( unzip ${SRC_UNZIP} )
 
