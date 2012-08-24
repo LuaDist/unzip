@@ -7,7 +7,7 @@
 # warning: compilation options might not be optical
 
 project ( infozip C )
-cmake_minimum_required ( VERSION 2.6 )
+cmake_minimum_required ( VERSION 2.8 )
 include ( cmake/dist.cmake )
 
 set ( SRC_UNZIP
