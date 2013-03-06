@@ -1,0 +1,21 @@
+type = "x86"
+arch = "Windows"
+author = "Mark Adler, John Bush, Karl Davis, Harald Denker, Jean-Michel Dubois, Jean-loup Gailly, Hunter Goatley, Ed Gordon, Ian Gorman, Chris Herborth, Dirk Haase, Greg Hartwig, Robert Heath, Jonathan Hudson, Paul Kienitz, David Kirschbaum, Johnny Lee, Onno van der Linden, Igor Mandrichenko, Steve P. Miller, Sergio Monesi, Keith Owens, George Petrov, Greg Roelofs, Kai Uwe Rommel, Steve Salisbury, Dave Smith, Steven M. Schweda, Christian Spieler, Cosmin Truta, Antoine Verheijen, Paul von Behren, Rich Wales, Mike White"
+desc = "Info-ZIP unzip utility"
+name = "unzip"
+maintainer = "Peter Drahoš"
+files = {
+Runtime = {
+[[bin\unzip.exe]],
+}
+,
+Data = {
+[[share\unzip\README]],
+[[share\unzip\LICENSE]],
+}
+,
+}
+
+license = "BSD"
+url = "http://www.info-zip.org/Zip.html"
+version = "6.0"
